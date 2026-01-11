@@ -1,0 +1,33 @@
+{
+  "name": "@movira/sdk",
+  "version": "0.1.0",
+  "description": "Movira TypeScript SDK for invoice-backed lending on Solana",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint 'src/**/*.{ts,tsx}' --fix",
+    "format": "prettier --write 'src/**/*.{ts,tsx,json,md}'",
+    "test": "vitest",
+    "prepare": "npm run build"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.0.0",
+    "prettier": "^2.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.86.0",
+    "bs58": "^5.0.0",
+    "node-fetch": "^2.6.7",
+    "tweetnacl": "^1.0.3"
+  }
+}
